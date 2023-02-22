@@ -19,6 +19,6 @@ header .status {
     background-color: #cccccc;
     border-radius: 100%;
 }
-.available {
+header .available {
     background-color: #ff545f;
 }

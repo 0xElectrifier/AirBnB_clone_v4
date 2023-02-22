@@ -24,10 +24,17 @@ $(document).ready(function () {
       success: function (data) {
         // alert('data length' + data.length);
         $.each(data, function (idx, place) {
-          // alert('data' + place.name)
+          alert('reviews' + place.review);
           $('SECTION.places').append('<article><div class="title_box"><h2>' + place.name + '</h2><div class="price_by_night">' + place.price_by_night + '</div></div><div class="information"><div class="max_guest">' + place.max_guest + '</div><div class="number_rooms">' + place.number_rooms + 'Bedroom(s)</div><div class="number_bathrooms">' + place.number_bathrooms + ' Bathroom(s)</div></div><div class="description">' + place.description + '</div></article>');
+          $('article').append('<div class="reviews"><h2><span id="show_reviews" data-id=' + place.id + '>show</span>' + (place.reviews).length + 'Reviews</h2><ul class="reviews_list"></ul></div>');
+          $.each(place.reviews, function (idx, review) {
+            $('UL.reviews_list').append('<li><h3>' + review.user + '</h3><p>' + review.text + '</p></li>');
+          });
         });
       }
     });
+  });
+  $('SPAN#show_reviews').on('click', function () {
+    if ($(this).text() === 'show') { $(this).text('hide'); /* check if ul is empty, if so append place.reviews (fetch reviews API) */ } else { $(this).text('show'); $(this).empty(); }
   });
 });
