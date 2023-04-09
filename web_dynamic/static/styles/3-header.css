@@ -3,22 +3,9 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
-    position: relative;
 }
 header .logo {
     background: url("../images/logo.png") no-repeat;
     left: 20px;
     height: 100%;
-}
-header .status {
-    height: 40px;
-    width: 40px;
-    right: 10px;
-    top: 20%;
-    position: absolute;
-    background-color: #cccccc;
-    border-radius: 100%;
-}
-header .available {
-    background-color: #ff545f;
 }

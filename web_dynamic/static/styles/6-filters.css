@@ -101,13 +101,3 @@ button:hover {
 .locations:hover .popover {
     visibility: visible;
 }
-/* by moi */
-.locations ul li input,
-.amenities ul li input {
-    display: inline block;
-    margin-right: 10px;
-}
-.amenities h4 {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
